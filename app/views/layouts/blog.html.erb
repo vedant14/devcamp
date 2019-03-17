@@ -21,14 +21,8 @@
      <%= link_to "Register", new_user_registration_path %>
    <% end %>
    
-     <%= yield %>
-   <div>
-      <div><%= link_to "Home", root_path %></div>
-      <div><%= link_to "About", about_me_path %></div>
-      <div><%= link_to "Contact", contact_path %></div>
-      <div><%= link_to "Blog", blogs_path %></div>
-      <div><%= link_to "Portfolio", portfolios_path %></div>
-    </div>
+    <%= yield %>
+    <%= render "shared/nav" %>
     <% if session[:source] %>
          <p> Thanks for visiting us from <%= session[:source] %>   </p>
     <% end %>
