@@ -8,19 +8,12 @@
     <%= stylesheet_link_tag  'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-
      <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
      <%= render "shared/nav", location: 'top' %>
-   
      <%= login_helper %>
-
      <%= yield %>
-
-    <% if session[:source] %>
-         <p> Thanks for visiting us from <%= session[:source] %>   </p>
-    <% end %>
+     <%= source_helper("blog") %>
   </body>
 </html>
