@@ -16,4 +16,8 @@ end
       content_tag(:p, greeting, class: "source_greetings")
     end
   end
+  
+  def copyright_generator
+    VedantViewTool::Renderrer.set_copy_right "Vedant","All rights Reserved"
+  end 
 end
