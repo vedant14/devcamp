@@ -17,12 +17,11 @@
      <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <%= render "shared/application_nav", location: 'top' %>
+          <%= render "shared/application_nav" %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
-          <%= login_helper %>
           <%= yield %>
-          <%= copyright_generator %>
+          <%= render "shared/application_footer" %>
           <%= source_helper("application") %>  
         </div>
       </div>
