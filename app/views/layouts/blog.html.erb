@@ -10,25 +10,22 @@
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  
   <body>
-    
     <%= render "shared/blog_nav" %>
-
- <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+      <div class="blog-header">
+        <div class="container">
+          <h1 class="blog-title">Vedant's Blogs</h1>
+          <p class="lead blog-description">Well check my blog.</p>
+          <%= link_to 'Write a new blog', new_blog_path  if logged_in?(:site_admin)%>
+        </div>
       </div>
-    </div>
 <!--end of blog header-->
-
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-    
-    <!--start of side bar-->
-    <div class="col-sm-3 offset-sm-1 blog-sidebar">
+ <div class="container">
+      <div class="row">
+        <%= yield %>
+        <!-- start of sidebar -->
+        <div class="col-sm-3 offset-sm-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
@@ -58,18 +55,19 @@
               <li><a href="#">Facebook</a></li>
             </ol>
           </div>
-        </div><!-- /.blog-sidebar -->
+        </div>
+        <!-- end of sidebar -->
+      </div>
 
-    <!--end of side bar-->
+        <!-- start of footer -->
+        <footer class="blog-footer">
+          <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          <p>
+            <a href="#">Back to top</a>
+          </p>
+        </footer>
+        <!-- end of footer -->
 
-      <!--start of footer-->
-          <footer class="blog-footer">
-            <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            <p>
-              <a href="#">Back to top</a>
-            </p>
-          </footer>
-      <!--end of footer-->
-    <%= source_helper("blog") %>
+        <%= source_helper("blog") %>
   </body>
 </html>

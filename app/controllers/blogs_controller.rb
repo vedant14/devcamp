@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  access all: [:show, :index], user: {except: [:destroy, :new, :update, :create, :edit]}, company_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :update, :create, :edit, :toggle_status
+  ]}, site_admin: :all
   layout 'blog'
   # GET /blogs
   # GET /blogs.json
