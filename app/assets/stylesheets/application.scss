@@ -163,9 +163,14 @@ body {
   /* Customise the bootstrapp */
   .card-body{
     color: black;
+    text-align: left;
+    
   }
 
   /* Customise the auth-links */
   .auth-link a {
     color: black;
+  }
+  .register-text{
+    text-align: right;
   }
