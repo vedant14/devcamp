@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-def login_helper class_type
+def login_helper class_type = ''
       if current_user.is_a?(GuestUser)
         (link_to "Login", new_user_session_path, class: class_type)+ 
         (" ".html_safe )+
