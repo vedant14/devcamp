@@ -12,21 +12,14 @@
   </head>
   <body>
     <%= render "shared/blog_nav" %>
-      <div class="blog-header">
-        <div class="container">
-          <h1 class="blog-title">Vedant's Blogs</h1>
-          <p class="lead blog-description">Well check my blog.</p>
-          <%= link_to 'Write a new blog', new_blog_path  if logged_in?(:site_admin)%>
-        </div>
-      </div>
-      <div class="container">
+    <%= render "shared/blog_masthead" %>
+    <div class="container">
       <div class="row">
         <%= yield %>
         <%= render "shared/blog_sidebar" %>
       </div>
-      <footer class="blog-footer">
-      <p> <%= copyright_generator %>  </p>
-      </footer>
-  <%= source_helper("blog") %>
+      <%= render "shared/blog_footer" %>
+      <%= source_helper("blog") %>
+    </div>
   </body>
 </html>

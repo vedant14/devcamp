@@ -61,3 +61,5 @@ gem 'jquery-rails'
 
 gem 'vedant_view_tool', git: 'https://github.com/vedant14/vedant_view_tool'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem 'kaminari', '~> 1.0', '>= 1.0.1' 
