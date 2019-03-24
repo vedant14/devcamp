@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-def login_helper class_type = ''
+  def login_helper class_type = ''
       if current_user.is_a?(GuestUser)
         (link_to "Login", new_user_session_path, class: class_type)+ 
         (" ".html_safe )+
@@ -8,7 +8,7 @@ def login_helper class_type = ''
       else
         link_to "Logout", destroy_user_session_path, method: :delete, class: class_type
       end 
-end
+  end
 
   def source_helper(layout_name)
     if session[:source]
@@ -20,4 +20,43 @@ end
   def copyright_generator
     VedantViewTool::Renderrer.set_copy_right "Vedant","All rights Reserved"
   end 
+  
+  
+  def nav_items
+    [
+      {
+        url: root_path,
+        title:'Home'
+      },
+      {
+        url: about_me_path,
+        title: 'About Me'
+      },
+      {
+        url: contact_path,
+        title: 'Contact Me'
+      },
+      {
+        url: blogs_path,
+        title: 'Blogs'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolios'
+      }
+    ]
+  end
+  
+  def nav_helper class_type, tag_type
+    nav_links= ''
+    
+    nav_items.each do |item|
+      nav_links<< "<#{tag_type}><a href='#{item[:url]}' class='#{class_type} #{active? item[:url]}'> #{item[:title]} </a></#{tag_type}>"
+    end
+    nav_links.html_safe
+  end
+  
+  def active? path
+  "active" if current_page? path
+  end
 end
