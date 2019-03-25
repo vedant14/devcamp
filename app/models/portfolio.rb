@@ -6,6 +6,9 @@ class Portfolio < ApplicationRecord
                                       reject_if: lambda { |attrs| attrs['name'].blank?}
 
   
+  def self.by_position
+    order("position ASC")
+  end
   def self.angular
     where(subtitle: "Angular")
   end
