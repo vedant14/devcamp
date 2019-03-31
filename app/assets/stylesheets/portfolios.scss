@@ -1,5 +1,8 @@
 @import "bootstrap";
 @import "jquery-ui";
+@import "font-awesome";
+@import "gritter";
+
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
@@ -57,4 +60,8 @@ footer {
 
 footer p {
   margin-bottom: .25rem;
+}
+
+.icon-big {
+  font-size: 2.5rem;
 }

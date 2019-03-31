@@ -1,5 +1,7 @@
 <div class="form-group nested-fields">
-  <%= f.label :name =%>
-  <%= f.text_field :name, class: 'form-control'=%>
-  <%= link_to_remove_association "Remove the technology item", f %>
-</div>
+    <% minus = fa_icon "minus-square" %>
+    <%= f.label :name =%>
+     <div class="icon-big">
+      <%= f.text_field :name, class: 'form-control'=%> <%= link_to_remove_association minus, f %>
+    </div>
+  </div>
