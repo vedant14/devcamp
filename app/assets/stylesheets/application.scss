@@ -159,7 +159,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
   /* Customise the bootstrapp */
@@ -187,4 +187,17 @@ body {
   .home-space span {
      margin-left: 10px;
      margin-right: 10px;
+  }
+  
+  .tweet-card {
+    color: black;
+    margin: 20px;
+  }
+  
+  .tweet-card a {
+    color: violet;
+  }
+  
+  .tweet-card > .card{
+    padding: 20px;
   }
