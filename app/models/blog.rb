@@ -8,6 +8,10 @@ class Blog < ApplicationRecord
    title_changed?
   end
   
+  def self.published_by_order
+    order("updated_at DESC")
+  end
+  
   belongs_to :topic, optional: true
   
   has_many :comments, dependent: :destroy
