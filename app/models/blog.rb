@@ -12,8 +12,7 @@ class Blog < ApplicationRecord
     order("updated_at DESC")
   end
   
-  belongs_to :topic, optional: true
-  
+  belongs_to :topic, optional: true  
   has_many :comments, dependent: :destroy
 
 end
