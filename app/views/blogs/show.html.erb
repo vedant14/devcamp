@@ -3,6 +3,7 @@
 
   <h2><%= @blog.title %></h2>
   <p><%= @blog.topic.title %></p>
+  <p><i> In <u><%= @blog.status %></u> mode </i></p>
   <p> <%= @blog.body %> </p>
 
   <%= render 'comments/comment_form' %>

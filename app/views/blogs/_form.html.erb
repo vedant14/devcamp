@@ -22,6 +22,12 @@
     %>
   </div>
   <div class="form-group">
+    <%= f.radio_button :status, 'draft', class:'btn btn-primary' %>
+    <%= f.label :status, "Stay in Draft?" %>
+    <%= f.radio_button :status, 'published', class:'btn btn-primary' %>
+    <%= f.label :status, "Publish this?" %>
+  </div>
+  <div class="form-group">
     <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
 <% end %>
