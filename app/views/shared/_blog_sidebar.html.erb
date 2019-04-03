@@ -3,9 +3,13 @@
     <h4>About</h4>
     <p>Hey I am vedant. Want to hang out with me?</p>
   </div>
-  
-  <div class="sidebar-module">
-    <h4> Topics </h4>
+ 
+ 
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>Topics</h4>
+      <% @side_topics.each do |topic| %>
+        <p><%= link_to topic.title, topic_path(topic) %></p>
+      <% end %>
   </div>
 
   <div class="sidebar-module">
