@@ -90,9 +90,9 @@ h6, .h6 {
   margin-bottom: 2rem;
   border-bottom: .05rem solid #eee;
 }
-.blog-title a {
+.blog-title {
   margin-bottom: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 .blog-description {
@@ -171,26 +171,25 @@ h6, .h6 {
 }
 
 /*
- * Social Media Links
+ * Custom styles
  */
-.social-links a {
- font-size: 1.5em;
+.social-links li {
+  font-size: 1.5em;
 }
-
 .comment-card > .card {
   margin-top: 15px;
 }
-
-.comment-attribution{
+.comment-attribution {
   font-size: .8em;
   font-style: italic;
 }
-
-.comment-name{
+.comment-name {
   font-weight: 700;
   color: blue;
 }
-
 .blogcrumb a {
   margin: 0px 10px 0px 10px;
+}
+.blog-nav {
+  margin-bottom: 30px;
 }
