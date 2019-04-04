@@ -21,5 +21,19 @@ module BlogsHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
-
+  
+  def status_text blog
+    if blog.draft?
+      "Publish this post?"
+    else
+      "Bring back to draft mode"  
+    end  
+  end  
+  def status_class blog
+    if blog.draft?
+      "btn btn-success"
+    else
+      "btn btn-warning" 
+    end  
+  end  
 end

@@ -1,0 +1,7 @@
+<% if logged_in?(:site_admin) %>
+  <nav class="breadcrumb blogcrumb">
+    <%= link_to status_text(blog), toggle_status_blog_path(blog), class: status_class(blog) %> 
+    <span class="social-links"><%= link_to fa_icon('pencil'), edit_blog_path(blog)%> </span>
+    <span class="social-links"><%= link_to fa_icon('trash'), blog, method: :delete, data: { confirm: 'Are you sure?' }%> </span>
+  </nav>
+<% end %>
