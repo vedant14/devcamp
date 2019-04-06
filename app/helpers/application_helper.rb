@@ -77,7 +77,7 @@ module ApplicationHelper
   
   def button_helper text, tag, class_type = 'btn btn-light'
     "<button 
-      class='#{class_type}' 
+      class='btn-margin #{class_type}' 
       data-toggle='collapse' 
       data-target='##{tag}' 
       aria-expanded='true'
