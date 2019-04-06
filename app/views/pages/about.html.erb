@@ -9,6 +9,95 @@
             <p>Well that was the end of it and my life goals didn’t align with my 10-year-old self until I joined my college and started learning about all these wonderful founders (through story books or biographies or memoirs) who made a dent in the universe. As you can guess, Steve Jobs was one of the people who influenced me the most.</p>
           <em>( Note : I even wanted to be an astronomer for a few years in between.)</em>
           <p>I now embark on a new path in life, and I intend to document that journey through this blog. I’ll share my entrepreneurial struggle each week and this was week zero.</p>
+      
+      <!--start of accordian-->
+      
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <%= button_helper "Know more","info", "btn btn-info" %>
+                    <%= button_helper "My Jobs","jobHistory" %>
+                    <%= button_helper "Skills","skillsMastered" %>
+                    <%= button_helper "Education","education" %>
+                    <%= button_helper "My Prized Portfolio","portfolioItems" %>
+                  </h5>
+                </div>
+                <div id="info" 
+                     class="collapse show" 
+                     aria-labelledby="headingOne" 
+                     data-parent="#accordion"
+                     >
+                  <div class="card-body">
+                    Click on the various sections here to know more about me.
+                  </div>
+                </div>
+                <div id="jobHistory" 
+                     class="collapse" 
+                     aria-labelledby="headingOne" 
+                     data-parent="#accordion"
+                     >
+                  <div class="card-body">
+                    These are the places I have Worked
+                    <div class="card-block">
+                      <ul>
+                        <li>Worked at Homzhub</li>
+                        <li>Worked at Accrete</li>
+                      </ul>  
+                    </div>
+                  </div>  
+                </div>
+                <div id="skillsMastered" 
+                     class="collapse" 
+                     aria-labelledby="headingOne" 
+                     data-parent="#accordion"
+                     >
+                  <div class="card-body">
+                    These are the skills I have mastered
+                    <div class= "card-block">
+                      <ul>
+                        <li>Ruby</li>
+                        <li>CSS</li>
+                        <li>Rails</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="education" 
+                     class="collapse" 
+                     aria-labelledby="headingOne" 
+                     data-parent="#accordion"
+                     >
+                  <div class="card-body">
+                    This is the education I have had
+                    <div class= "card-block">
+                      <ul>
+                        <li>B.E in Industrial Engineering</li>
+                        <li>High School</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="portfolioItems" 
+                     class="collapse" 
+                     aria-labelledby="headingOne" 
+                     data-parent="#accordion"
+                     >
+                  <div class="card-body">
+                    <div class= "card-block">
+                      My portfolio
+                    </div>
+                    <div class= "card-block">
+                      Tip Calculator
+                      <li>This is what I did </li>
+                    </div>
+                  </div>
+                </div>
+                
+<!--end of content-->
+              </div>
+            </div>
+      <!--end of accordian-->
         </div>
       </div>
     </div>

@@ -74,4 +74,16 @@ module ApplicationHelper
   def alert_generator msg
     js add_gritter(msg, title: "Alert!", :time => 1500)
   end
+  
+  def button_helper text, tag, class_type = 'btn btn-light'
+    "<button 
+      class='#{class_type}' 
+      data-toggle='collapse' 
+      data-target='##{tag}' 
+      aria-expanded='true'
+      aria-controls='#{tag}'
+      >
+      #{text}
+    </button>".html_safe
+  end
 end
