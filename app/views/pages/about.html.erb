@@ -3,40 +3,44 @@
     <h1>About Vedant</h1> <br>
       <div class="row">
         <div class="col-md-4"> 
-          <%= image_tag "https://i.imgur.com/d9tgwGc.jpg", width: '100%', alt: "Office Office" %>
+          <%= image_tag "https://i.imgur.com/d9tgwGc.jpg", width: '100%', alt: "Office Office" %> 
+        <div class="skills">
+        <h3>Skills I know</h3>
+          <% @skills.each do |skill| %>
+          <div class='skill'>
+            <p> <%= skill.title %> </p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<%= skill.percent_utilized%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= skill.percent_utilized%>%">
+                </div>
+              </div>
+          </div>
+          <% end %>
+        </div>
         </div>
         <div class="col-md-8"> 
             <p>Well that was the end of it and my life goals didn’t align with my 10-year-old self until I joined my college and started learning about all these wonderful founders (through story books or biographies or memoirs) who made a dent in the universe. As you can guess, Steve Jobs was one of the people who influenced me the most.</p>
           <em>( Note : I even wanted to be an astronomer for a few years in between.)</em>
           <p>I now embark on a new path in life, and I intend to document that journey through this blog. I’ll share my entrepreneurial struggle each week and this was week zero.</p>
-      
-      <!--start of accordian-->
-      
+          
             <div id="accordion">
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
-                    <%= button_helper "Know more","info", "btn btn-info" %>
+                    <%= button_helper "Know more","infoAboutMe", "btn btn-info" %>
                     <%= button_helper "My Jobs","jobHistory" %>
                     <%= button_helper "Skills","skillsMastered" %>
                     <%= button_helper "Education","education" %>
                     <%= button_helper "My Prized Portfolio","portfolioItems" %>
                   </h5>
                 </div>
-                <div id="info" 
-                     class="collapse show" 
-                     aria-labelledby="headingOne" 
-                     data-parent="#accordion"
-                     >
-                  <div class="card-body">
-                    Click on the various sections here to know more about me.
+                <div id="infoAboutMe" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="protect-card">
+                    <div class="card">
+                      Click on the various sections here to know more about me.
+                    </div>
                   </div>
                 </div>
-                <div id="jobHistory" 
-                     class="collapse" 
-                     aria-labelledby="headingOne" 
-                     data-parent="#accordion"
-                     >
+                <div id="jobHistory" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     These are the places I have Worked
                     <div class="card-block">
@@ -47,11 +51,7 @@
                     </div>
                   </div>  
                 </div>
-                <div id="skillsMastered" 
-                     class="collapse" 
-                     aria-labelledby="headingOne" 
-                     data-parent="#accordion"
-                     >
+                <div id="skillsMastered" class="collapse"  aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     These are the skills I have mastered
                     <div class= "card-block">
@@ -63,11 +63,7 @@
                     </div>
                   </div>
                 </div>
-                <div id="education" 
-                     class="collapse" 
-                     aria-labelledby="headingOne" 
-                     data-parent="#accordion"
-                     >
+                <div id="education" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     This is the education I have had
                     <div class= "card-block">
@@ -78,11 +74,7 @@
                     </div>
                   </div>
                 </div>
-                <div id="portfolioItems" 
-                     class="collapse" 
-                     aria-labelledby="headingOne" 
-                     data-parent="#accordion"
-                     >
+                <div id="portfolioItems" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class= "card-block">
                       My portfolio
@@ -93,12 +85,9 @@
                     </div>
                   </div>
                 </div>
-                
-<!--end of content-->
               </div>
             </div>
-      <!--end of accordian-->
-        </div>
+          </div>
       </div>
     </div>
 </div>
