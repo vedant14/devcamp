@@ -78,3 +78,5 @@ group :development, :test do
   gem 'sqlite3'
 end
 gem 'pg', group: :production
+
+ruby "2.4.0"
