@@ -55,6 +55,7 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  margin-top: auto;
 }
 
 /* Padding for spacing */
@@ -214,13 +215,12 @@ h6, .h6 {
   
   .application-render{
     text-align: left;
+    padding: 20px;
   }
   
   .application-render > .card{
     color: black;
     padding: 30px;
-    margin-top: 40px;
-    
   }
   .card-header {
     background-color: #fdfd96;
