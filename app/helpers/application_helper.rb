@@ -18,9 +18,9 @@ module ApplicationHelper
   end
   
   def copyright_generator
-    VedantViewTool::Renderrer.set_copy_right "Vedant","All rights Reserved"
-  end 
-  
+    DevcampViewTool::Renderer.copyright 'Vedant Lohbare', 'All rights reserved'
+  end
+
   
   def nav_items
     [
