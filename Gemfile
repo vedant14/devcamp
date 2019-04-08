@@ -73,11 +73,8 @@ gem 'redis', '~> 4.1'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
-ruby "2.4.1"
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
+  gem 'sqlite3'
 end
-group :production do
-  gem 'pg', '0.20.0'
-end
+gem 'pg', group: :production
