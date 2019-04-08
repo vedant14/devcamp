@@ -57,7 +57,7 @@ gem 'devise', '~> 4.2'
 gem "bootstrap", ">= 4.3.1"
 gem 'jquery-rails'
 
-gem 'vedant_view_tool', git: 'https://github.com/vedant14/vedant_view_tool'
+gem 'devcamp_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'kaminari', '~> 1.0', '>= 1.0.1' 
